@@ -1,0 +1,133 @@
+.board { 
+margin-top: 5%;
+margin-bottom: 5%;
+margin-left:10%;
+border:2px solid black; 
+display:flex; 
+flex-wrap:wrap; 
+height:60%; 
+width:50%; 
+background:gray;
+border-radius: 3%;
+border-style: inset;
+z-index: -1;
+opacity: 50%;
+} 
+.newgame{
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    border: 2px solid black; 
+    width:20%; 
+    height:50%;
+    margin-top: 5%;
+    margin-left:-4%;
+    background-color: rgb(207, 239, 253);
+}
+.currentPlayer { 
+    margin-top: 5%;
+    display:flex; 
+    flex-wrap:wrap;
+    flex-direction: column;
+    text-align: center;
+    height:15%; 
+    width:100%; 
+    margin-right: 5%;
+    border-radius: 10%;
+    color: white;
+    background-color: red;
+    } 
+.board div { 
+height:5vw; 
+width:5vw; 
+margin:.25vw;
+border-radius:100%;
+}
+.square, .game-over{ 
+background:white; 
+} 
+.taken { 
+/*background:red !important */
+} 
+.player-one { 
+background-color:red;
+}
+.player-two { 
+background-color:lightgreen; 
+}
+.restart{ 
+width: 100%; 
+height: max-content; 
+align-content: center;
+flex-direction: column; 
+}
+
+#playAgain, #playQuit{
+    width: 100%;
+    border: none;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 2%;
+    
+}
+
+#playNew, #joinNew{
+    width: 50%;
+    border: none;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 2%;
+}
+#playAgain, #playQuit, #playNew, #joinNew:hover{
+    cursor: pointer;
+}
+#sidebar{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 750px) {
+    .play {
+    flex-direction: column;
+    align-items: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        }
+    .board { 
+        width:80%;
+        margin-left:0;
+    } 
+    .board div { 
+        height:7.5vw; 
+        width:7.5vw; 
+        margin:3px;
+        border-radius:100%;
+    }
+    .currentPlayer { 
+        height:20%; 
+        width:100%;
+        padding: 0%;
+    }
+    .newgame{
+        width: 60%;
+        height: 30%;
+        margin-top: 13.5%;
+    }
+}

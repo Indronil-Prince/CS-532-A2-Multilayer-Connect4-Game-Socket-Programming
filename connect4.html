@@ -1,0 +1,63 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Connect 4</title>
+        <link rel="stylesheet" type="text/css" href="style3.css" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">INDRONIL B.</h1>
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Work.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li id="present"><a href="connect4.html">Game</a></li>
+                    <li><button id="toggle-theme" style="color:white; background-color: #060627;">Dark Theme</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container" style="display: flex;">
+                <div class="play" style="display: flex; flex-direction: column;">
+                    <div class="newgame">
+                        <h1>Start a new game</h1> </br>
+                        <button id="playNew" style="margin-bottom: 2.5%; color: white; background-color: black;">New Game</button></br>
+                        Game ID: <input type="text" id="gameid"><br>
+                        <button id="joinNew" style="margin-bottom: 2.5%; color: white; background-color: black;">Join Game</button></br>
+                        <h2 style="color:red;text-shadow: 1px 1px 2px black;">Player 1</h2> vs <h2 style="color:lightgreen;text-shadow: 1px 1px 2px black;">Player 2</h2>
+                    </div>
+                    <div><h1 style="color:maroon; text-shadow: 1px 1px 2px black;">CONNECT 4</h1></div>
+                    Game ID:<div class="gamenum"></div></br><div class="you"></div>
+                    <div id="sidebar">
+                        <div class="restart">
+                            <button id="playAgain">Play again</button>
+                            <button id="playQuit">Quit Game</button>
+                        </div>
+                        <div class="currentPlayer">
+                            <span id="name1" style="margin-top: 30px;">Current player</span>
+                            <h1><span class="player"></span></h1>
+                        </div>
+                        <p style="text-align: center;  margin-top:10%"><h3>SCORECARD</h3></p>
+                        <div style="display: flex;">
+                            <span style="border-style: dashed; padding: 2%; text-align: center;">Player 1<span style="text-align: center;"><h1 class="score1">0</h1></span></span>&emsp;
+                            <span style="border-style: dashed; padding: 2%; text-align: center;">Player 2<span style="text-align: center;"><h1 class="score2">0</h1></span></span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="board"></div>
+                </div>
+        </main>
+        <footer>
+            <p>Copyright &copy; Indronil Bhattacharjee 2023</p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script3.js"></script>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
